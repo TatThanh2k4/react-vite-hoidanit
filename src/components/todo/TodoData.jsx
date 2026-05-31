@@ -1,9 +1,21 @@
+const TodoData = (props) => {
+  //props là một biến object {}
+  // {
+  //   name: "ERic",
+  //   age: 25,
+  //   data: {}
+  // }
+  const {name, age, date} = props;
+  // const name = props.name
+  // const age = props.age
+  // const data = props.data
 
-const TodoData = () => {
+  console.log(">>> check props: ", props)
     return (
         <div className="todo-data">
-        <div> Learning React</div>
-        <div> Watching Youtube</div>
+          <div>My name is {name}</div>
+          <div> Learning React</div>
+          <div> Watching Youtube</div>
       </div>
     )
 }
