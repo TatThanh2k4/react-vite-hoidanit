@@ -5,6 +5,7 @@ const TodoData = (props) => {
   //   age: 25,
   //   data: {}
   // }
+  //destructuring object
   const {name, age, date} = props;
   // const name = props.name
   // const age = props.age
@@ -14,8 +15,11 @@ const TodoData = (props) => {
     return (
         <div className="todo-data">
           <div>My name is {name}</div>
-          <div> Learning React</div>
+          <div> Learning React </div>
           <div> Watching Youtube</div>
+          <div>
+            {JSON.stringify(props.todoList)}
+          </div>
       </div>
     )
 }
