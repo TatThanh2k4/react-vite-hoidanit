@@ -11,6 +11,7 @@ const TodoNew = (props) => {
     // addNewTodo("eric") //fire
     const handleClick = () => {
       addNewTodo(valueInput)
+      setValueInput("");
     }
 
     const handleOnChange = (name) => {
@@ -22,6 +23,7 @@ const TodoNew = (props) => {
         <input type="text"
           onChange={(event) => handleOnChange(event.target.value)} 
           //khi gõ gt hàm handleOnChange sẽ nhận gt và truyền cho biến name ở trên
+          value={valueInput}
         />
         <button 
           style={{cursor: "pointer"}}
