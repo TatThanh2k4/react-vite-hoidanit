@@ -7,3 +7,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+// render: dịch code từ app đưa vào root

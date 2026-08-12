@@ -10,7 +10,7 @@ const TodoNew = (props) => {
 
     // addNewTodo("eric") //fire
     const handleClick = () => {
-      console.log(">>> check valueInput: ", valueInput)
+      addNewTodo(valueInput)
     }
 
     const handleOnChange = (name) => {
@@ -20,11 +20,12 @@ const TodoNew = (props) => {
     return (
         <div className="todo-new">
         <input type="text"
-          onChange={(event) => handleOnChange(event.target.value)}
+          onChange={(event) => handleOnChange(event.target.value)} 
+          //khi gõ gt hàm handleOnChange sẽ nhận gt và truyền cho biến name ở trên
         />
         <button 
           style={{cursor: "pointer"}}
-          onClick={handleClick}
+          onClick={handleClick} //khi nhấn add thì thằng con gửi yêu cầu render lên cha để thay đổi todoList rồi gửi lại thằng con
         >Add</button>
         <div>
           My text input is = {valueInput}
