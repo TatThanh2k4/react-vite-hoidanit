@@ -23,7 +23,7 @@ const TodoNew = (props) => {
         <input type="text"
           onChange={(event) => handleOnChange(event.target.value)} 
           //khi gõ gt hàm handleOnChange sẽ nhận gt và truyền cho biến name ở trên
-          value={valueInput}
+          value={valueInput} // luôn thay đổi khi valueInput được cập nhật thay đổi
         />
         <button 
           style={{cursor: "pointer"}}
