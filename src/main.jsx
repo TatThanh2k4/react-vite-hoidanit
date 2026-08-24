@@ -12,6 +12,17 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,//chay component tuong ung
+    // gan moi quan he cha con
+    children: [
+       {
+    path: "/users",
+    element: <UserPage/>
+  },
+   {
+    path: "/products",
+    element: <ProductPage/>
+  }
+    ]
   },
   {
     path: "/login",
@@ -20,14 +31,6 @@ const router = createBrowserRouter([
    {
     path: "/register",
     element: <RegisterPage/>
-  },
-   {
-    path: "/users",
-    element: <UserPage/>
-  },
-   {
-    path: "/products",
-    element: <ProductPage/>
   }
 ]);
 
