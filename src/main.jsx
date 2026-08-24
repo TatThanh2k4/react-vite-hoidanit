@@ -2,34 +2,40 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginPage from "./pages/login.jsx";
+import RegisterPage from "./pages/register.jsx";
+import UserPage from "./pages/user.jsx";
+import ProductPage from "./pages/product.jsx";
+import './styles/global.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App/>,//chay component tuong ung
   },
   {
     path: "/login",
-    element: <div>login page</div>
+    element: <LoginPage />
   },
    {
     path: "/register",
-    element: <div>register page</div>
+    element: <RegisterPage/>
   },
    {
     path: "/users",
-    element: <div>users page</div>
+    element: <UserPage/>
   },
    {
     path: "/products",
-    element: <div>products page</div>
+    element: <ProductPage/>
   }
 ]);
 
+// render: dịch code từ app đưa vào root
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <App /> */}
     <RouterProvider router={router} />
   </React.StrictMode>,
 );
-// render: dịch code từ app đưa vào root
+
