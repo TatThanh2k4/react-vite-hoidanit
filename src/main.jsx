@@ -7,6 +7,7 @@ import RegisterPage from "./pages/register.jsx";
 import UserPage from "./pages/user.jsx";
 import ProductPage from "./pages/product.jsx";
 import './styles/global.css';
+import TodoApp from "./components/todo/TodoApp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,12 @@ const router = createBrowserRouter([
     element: <App/>,//chay component tuong ung
     // gan moi quan he cha con
     children: [
+      //phần outlet sẽ hiển thị cái này khi ở trang chủ, cái này sẽ không hiển thị ở trang k
+      {
+        index: true,
+        element: <TodoApp />
+      },
+      //phần outlet sẽ hiển thị cái này khi ở trang users
        {
     path: "/users",
     element: <UserPage/>
