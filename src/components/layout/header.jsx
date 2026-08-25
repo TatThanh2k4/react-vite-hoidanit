@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
     return (
         <ul>
-            {/*đường dẫn này đơn giản hơn đường dẫn tuyệt đối và tương đối học ở html vì nó liên quan đến đường dẫn route của trình duyệt*/}
-            <li><Link class="active" to="/">Home</Link></li>
-            <li><Link to="/users">Users</Link></li>
-            <li><Link to="/products">Products</Link></li>
+            {/*Link: đường dẫn này đơn giản hơn đường dẫn tuyệt đối và tương đối học ở html vì nó liên quan đến đường dẫn route của trình duyệt*/}
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/users">Users</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
         </ul>
     )
 }
