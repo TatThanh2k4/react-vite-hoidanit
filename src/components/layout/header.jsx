@@ -7,7 +7,7 @@ const Header = () => {
             {/*Link: đường dẫn này đơn giản hơn đường dẫn tuyệt đối và tương đối học ở html vì nó liên quan đến đường dẫn route của trình duyệt*/}
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/users">Users</NavLink></li>
-            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/books">Books</NavLink></li>
         </ul>
     )
 }
